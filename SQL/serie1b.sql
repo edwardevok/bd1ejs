@@ -57,6 +57,15 @@ FROM GASTO
 WHERE MONTH(fecha_pago) BETWEEN 1 AND 3 AND importe > 20000 AND DATEPART(WEEKDAY, fecha_pago) NOT IN (1,7);
 
 --Ejercicio 10
+SELECT *
+FROM persona
+WHERE DATEDIFF(year,fecha_nacimiento, GETDATE()) = 30;
+
+--O TAMBIEN VALE
+--Ejercicio 10
+SELECT *
+FROM persona
+WHERE YEAR(GETDATE()) - YEAR(fecha_nacimiento) = 30;
 
 
 
