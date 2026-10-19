@@ -14,5 +14,7 @@ FROM persona
 WHERE telefono IS NOT NULL;
 
 --Ejercicio 4
-SELECT persona_id, apellido_nombre,
-CASE
+SELECT persona_id,
+ISNULL(apellido_nombre, '(Sin Dato)') AS apellido_nombre,
+ISNULL(telefono, '(Sin Dato)') AS telefono
+FROM persona;
